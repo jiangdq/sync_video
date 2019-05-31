@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <video src="./movie.ogg"></video>
+    <video src="./movie.ogg"></video>
+    <video src="./movie.ogg"></video>
+    <button id="play">play</button>
+    <button id="pause">pause</button>
+    <script src="./index.js"></script>
+    <script>
+        var videos = document.getElementsByTagName('video')
+        var vv = new sync_video(videos)
+        var p1 = document.getElementById('play') 
+        var p2 = document.getElementById('pause') 
+        p1.addEventListener('click',function(){
+            vv.play()
+        })
+        p2.addEventListener('click',function(){
+            vv.pause()
+        })
+    </script>
+</body>
+
+</html>
